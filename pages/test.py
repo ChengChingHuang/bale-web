@@ -1,4 +1,6 @@
 import streamlit as st
+from utils import init_page
+init_page()
 
 st.title("這是標題")
 st.write("這是一個用 `st.write` 顯示的字串，可以處理多種格式，例如：數字、文字、Markdown、數據框等。")
@@ -53,3 +55,7 @@ col1, col2, col3 = st.columns([1, 2, 3])
 col1.button("按鈕1", key="btn5")  # 在col1中建立一個按鈕類似st.button("按鈕1")
 col2.button("按鈕2", key="btn6")  # 在col2中建立一個按鈕類似st.button("按鈕2")
 col3.button("按鈕3", key="btn7")  # 在col3中建立一個按鈕類似st.button("按鈕3")
+
+# 固定按鈕
+if st.button("點擊我"):
+    st.modal("這是一個對話框", "這是對話框的內容。")
