@@ -2,3 +2,4 @@
 relu.json
 .streamlit
 .vscode
+__pycache__
